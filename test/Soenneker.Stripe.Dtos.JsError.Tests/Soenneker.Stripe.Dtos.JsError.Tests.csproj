@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Soenneker.Tests.Unit" Version="4.0.1355" />
+        <PackageReference Include="TUnit" Version="1.72.16" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\Soenneker.Stripe.Dtos.JsError\Soenneker.Stripe.Dtos.JsError.csproj" />
+    </ItemGroup>
+
+</Project>

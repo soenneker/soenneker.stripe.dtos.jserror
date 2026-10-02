@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <Platforms>AnyCPU</Platforms>
+        <NoWarn>$(NoWarn);1591</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Description>Stripe.js browser error payloads with forward-compatible codes and expanded payment objects.</Description>
+        <Version Condition="'$(BUILD_VERSION)' == ''">4.0.0</Version>
+        <Version Condition="'$(BUILD_VERSION)' != ''">$(BUILD_VERSION)</Version>
+        <AssemblyName>Soenneker.Stripe.Dtos.JsError</AssemblyName>
+        <PackageId>Soenneker.Stripe.Dtos.JsError</PackageId>
+        <PackageTags>stripe dtos jserror javascript js error dto payments stripejserror object csharp dotnet c# .net</PackageTags>
+        <Copyright>Copyright © 2026 Jake Soenneker</Copyright>
+        <Authors>Jake Soenneker</Authors>
+        <Company>https://soenneker.com</Company>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <IsPackable>true</IsPackable>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/soenneker/soenneker.stripe.dtos.jserror</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/soenneker/soenneker.stripe.dtos.jserror</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryBranch>main</RepositoryBranch>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <LangVersion>latest</LangVersion>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageIcon>icon.png</PackageIcon>
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+        <None Include="..\..\icon.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
+</Project>
