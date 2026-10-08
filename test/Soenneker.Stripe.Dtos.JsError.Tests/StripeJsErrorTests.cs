@@ -1,5 +1,6 @@
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Soenneker.Stripe.Dtos.JsError.Tests;
 
@@ -9,7 +10,7 @@ public sealed class StripeJsErrorTests
     [Arguments("validation_error")]
     [Arguments("api_connection_error")]
     [Arguments("future_error")]
-    public async Task Browser_error_values_are_preserved(string type)
+    public async Task Browser_error_values_are_preserved(string type, CancellationToken cancellationToken)
     {
         string json = $$"""{"type":"{{type}}","code":"future_code","decline_code":"future_decline","message":"Test error"}""";
         StripeJsError error = JsonSerializer.Deserialize<StripeJsError>(json)!;
@@ -20,7 +21,7 @@ public sealed class StripeJsErrorTests
     }
 
     [Test]
-    public async Task Expanded_objects_survive_round_trip()
+    public async Task Expanded_objects_survive_round_trip(CancellationToken cancellationToken)
     {
         const string json = """
             {"type":"card_error","payment_intent":{"id":"pi_test","amount":10000},
